@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #include <iostream>
 #include <string>
 #include "Invoice.h"
@@ -18,12 +17,3 @@ int main(){
     cout << "Descricao da fatura 3: "<< fatura3.getDescricao() << endl;
     cout << "Valor da Fatura 3: "<< fatura3.getInvoiceAmount() << endl;
 }
-=======
-#include <iostream>
-
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
-
-int main(int argc, char** argv) {
-	return 0;
-}
->>>>>>> 0c52fe5c181cdaeabb2e25ba4d7da7fe8d661550
