@@ -1,17 +1,18 @@
 #include <iostream>
+#include <string>
 #include "cadastro.h"
 
 using namespace std;
 
 Pessoa::Pessoa(){
 	nome = "Nome da pessoa";
-	idade = "0";
+	idade = 0;
 	telefone = "081900000000";
 }
 
 Pessoa::Pessoa(string nome, int idade, string telefone){
 	this->nome = nome;
-	this->idade = idade
+	this->idade = idade;
 	this->telefone = telefone;
 }
 
