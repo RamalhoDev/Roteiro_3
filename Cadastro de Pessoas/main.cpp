@@ -12,9 +12,10 @@ int main(){
 	string nome, telefone;
 	int idade;
 
-	cout << cadastroDePessoas.getNome() << endl;
-	cout << cadastroDePessoas.getIdade() << endl;
-	cout << cadastroDePessoas.getTelefone() << endl;
+	cout << "Nome atual: " << cadastroDePessoas.getNome() << endl;
+	cout << "Idade atual: " << cadastroDePessoas.getIdade() << endl;
+	cout << "Telefone atual: " << cadastroDePessoas.getTelefone() << endl;
+	cout << "-----------------------------------------------------------------------------------------" << endl << endl;
 
 	cout << "Digite o nome da pessoa: ";
 	getline(cin, nome);
@@ -25,10 +26,11 @@ int main(){
 	cadastroDePessoas.setIdade(idade);
 
 	cout << "Digite o telefone da pessoa: ";
-	getline(cin, telefone);
+	cin >> telefone;
 	cadastroDePessoas.setTelefone(telefone);
 
-	cout << cadastroDePessoas.getNome() << endl;
-	cout << cadastroDePessoas.getIdade() << endl;
-	cout << cadastroDePessoas.getTelefone() << endl;
+	cout << endl << "-----------------------------------------------------------------------------------------" << endl;
+	cout << "Nome atualizado: " << cadastroDePessoas.getNome() << endl;
+	cout << "Idade atualizado: " << cadastroDePessoas.getIdade() << endl;
+	cout << "Telefone atualizado: " << cadastroDePessoas.getTelefone() << endl;
 }

@@ -10,6 +10,10 @@ Pessoa::Pessoa(){
 	telefone = "081900000000";
 }
 
+Pessoa::PessoaNome(){
+	nome = "Nome da pessoa";
+}
+
 Pessoa::Pessoa(string nome, int idade, string telefone){
 	this->nome = nome;
 	this->idade = idade;
