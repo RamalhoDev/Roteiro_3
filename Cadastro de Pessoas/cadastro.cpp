@@ -22,6 +22,11 @@ Pessoa::Pessoa(string nome, int idade, string telefone){
 	this->telefone = telefone;
 }
 
+//Construtor sobrecarregado - Recebe nome
+Pessoa::Pessoa(string nome){
+	this->nome = nome;
+}
+
 //Destrutor
 Pessoa::~Pessoa(){
 	nome = "";

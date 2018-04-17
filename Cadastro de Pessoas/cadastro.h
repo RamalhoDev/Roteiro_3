@@ -18,6 +18,7 @@ class Pessoa{
 	public: 
 		Pessoa();
 		Pessoa(string, int, string);
+		Pessoa(string);
 		virtual ~Pessoa();
 		string getNome();
 		int getIdade();
