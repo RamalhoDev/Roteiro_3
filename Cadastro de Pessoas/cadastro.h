@@ -4,6 +4,8 @@
 #define TRUE 1
 #define FALSE 0
 
+using namespace std;
+
 class Pessoa{
 	private:
 		string nome;
@@ -11,12 +13,14 @@ class Pessoa{
 		string telefone;
 	public: 
 		Pessoa();
-		Pessoa(string, int, int);
+		Pessoa(string, int, string);
 		virtual ~Pessoa();
 		string getNome();
 		int getIdade();
 		string getTelefone();
-		void setNome();
-		void setIdade();
-		void setTelefone();
-}
+		void setNome(string nome);
+		void setIdade(int idade);
+		void setTelefone(string telefone);
+};
+
+#endif
