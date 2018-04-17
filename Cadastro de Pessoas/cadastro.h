@@ -1,7 +1,6 @@
 /*
 	UNIVERDIADE FEDERAL DA PARAIBA
 */
-
 #include <string>
 #ifndef CADASTRO_H_
 #define CADASTRO_H_

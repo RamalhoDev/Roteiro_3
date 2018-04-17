@@ -1,7 +1,6 @@
 /*
 	UNIVERDIADE FEDERAL DA PARAIBA
 */
-
 #include <iostream>
 #include <string>
 #include <stdio.h>
