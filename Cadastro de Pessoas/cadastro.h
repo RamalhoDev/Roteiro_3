@@ -11,6 +11,7 @@ class Pessoa{
 		string nome;
 		int idade;
 		string telefone;
+		string tudoJunto;
 	public: 
 		Pessoa();
 		Pessoa(string, int, string);
