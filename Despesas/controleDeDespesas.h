@@ -1,8 +1,9 @@
 #ifndef CONTROLEDEDESPESAS_H_
 #define CONTROLEDEDESPESAS_H_
-#include "despesas.h"
+#include <iostream>
 #include <string>
 #include <vector>
+#include "despesas.h"
 
 using namespace std;
 
@@ -11,9 +12,10 @@ class ControleDeDespesas{
 		vector <Despesas> despesas;
 	public:
 		ControleDeDespesas();
-		void setDespesa(vector<Despesas> despesas);
+		virtual ~ControleDeDespesas();
+		void setDespesas(vector<Despesas> despesas);
 		double calculaTotalDeDespesas(); 
-		bool existeDespesaDoTipo(string tipo);
+		bool existeDespesaDoTipo(string tipoExiste);
 	
 };
 

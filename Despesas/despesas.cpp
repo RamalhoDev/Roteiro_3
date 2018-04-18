@@ -5,8 +5,8 @@
 using namespace std;
 
 Despesas::Despesas(){
-	valor = 0;
-	tipoDeGasto = "default";
+	this->valor = 0;
+	this->tipoDeGasto = "default";
 }
 
 Despesas::Despesas(double valor, string tipoDeGasto){
@@ -15,23 +15,21 @@ Despesas::Despesas(double valor, string tipoDeGasto){
 }
 
 Despesas::~Despesas(){
-	valor = 0;
-	tipoDeGasto = "default";
-	cout << "Destrutor";
+	//nothing
 }
 
-double getValor(){
-	return valor;
+double Despesas::getValor(){
+	return this->valor;
 }
 
-string getTipoDeGasto(){
-	return tipoDeGasto;
+string Despesas::getTipoDeGasto(){
+	return this->tipoDeGasto;
 }
 
-void setValor(double valor){
+void Despesas::setValor(double valor){
 	this->valor = valor;
 }
 
-void setTipoDeGasto(string tipoDeGasto){
+void Despesas::setTipoDeGasto(string tipoDeGasto){
 	this->tipoDeGasto = tipoDeGasto;
 }
