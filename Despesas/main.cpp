@@ -14,23 +14,26 @@ int main(){
 
 	cout << "Digite quantas dispesas você quer cadastrar: ";
 	cin >> indice;
+	cin.ignore();
 
 	vector <Despesas> gasto(indice);
 
 	for(int i = 0; i < indice; i++){
 		cout << "Digite o tipo de gasto: ";
-		cin >> tipo;
+		getline(cin, tipo);
 		gasto[i].setTipoDeGasto(tipo);
 
 		cout << "Digite o valor do gasto: ";
 		cin >> valor;
 		gasto[i].setValor(valor);
+
+		cin.ignore();
 	}	
 
 	computo->setDespesas(gasto);
 
 	cout << endl << "Faça uma busca por tipo de gasto: ";
-	cin >> tipo;
+	getline(cin, tipo);
 
 	cout << "-------------------------------------" << endl;
 	cout << "Valores da despesa do tipo: " << tipo << endl;
