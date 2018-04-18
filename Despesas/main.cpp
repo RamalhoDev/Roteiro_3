@@ -6,27 +6,41 @@
 using namespace std;
 
 int main(){
-	vector <Despesas> gasto(2);
 	ControleDeDespesas *computo = new ControleDeDespesas();
 
-	gasto[0].setTipoDeGasto("venda");
-	gasto[0].setValor(500);
+	int indice;
+	double valor;
+	string tipo;
 
-	gasto[1].setTipoDeGasto("aluguel");
-	gasto[1].setValor(700);	
+	cout << "Digite quantas dispesas você quer cadastrar: ";
+	cin >> indice;
+
+	vector <Despesas> gasto(indice);
+
+	for(int i = 0; i < indice; i++){
+		cout << "Digite o tipo de gasto: ";
+		cin >> tipo;
+		gasto[i].setTipoDeGasto(tipo);
+
+		cout << "Digite o valor do gasto: ";
+		cin >> valor;
+		gasto[i].setValor(valor);
+	}	
 
 	computo->setDespesas(gasto);
 
-	if(computo->existeDespesaDoTipo("aluguel")){
-		cout << "Existe despesa com aluguel" << endl;
-	}else{
-		cout << "Não existe despesa com aluguel" << endl;
-	}
+	cout << endl << "Faça uma busca por tipo de gasto: ";
+	cin >> tipo;
 
-	if(computo->existeDespesaDoTipo("casa")){
-		cout << "Existe despesa com casa" << endl;
-	}else{
-		cout << "Não existe depesa com casa" << endl;
+	for(int i = 0; i < indice; i++){
+		if(computo->existeDespesaDoTipo(tipo)){
+			if(gasto[i].getTipoDeGasto() == tipo){
+				cout << "Existe despesa com " << tipo << endl;
+				cout << "Valor: " << gasto[i].getValor() << endl;
+			}
+		}else{
+			cout << "Não existe despesa com " << tipo << endl;
+		}
 	}
 
 	cout << "Gastos total: " << computo->calculaTotalDeDespesas() << endl;
