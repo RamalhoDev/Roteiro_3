@@ -9,7 +9,7 @@ int main(){
 	ControleDeDespesas *computo = new ControleDeDespesas();
 
 	int indice;
-	double valor;
+	double valor, soma = 0;
 	string tipo;
 
 	cout << "Digite quantas dispesas você quer cadastrar: ";
@@ -32,16 +32,24 @@ int main(){
 	cout << endl << "Faça uma busca por tipo de gasto: ";
 	cin >> tipo;
 
+	cout << "-------------------------------------" << endl;
+	cout << "Valores da despesa do tipo: " << tipo << endl;
+	cout << "-------------------------------------" << endl;
 	for(int i = 0; i < indice; i++){
 		if(computo->existeDespesaDoTipo(tipo)){
 			if(gasto[i].getTipoDeGasto() == tipo){
-				cout << "Existe despesa com " << tipo << endl;
-				cout << "Valor: " << gasto[i].getValor() << endl;
+				cout << "Valor: R$" << gasto[i].getValor() << endl;
+				soma += gasto[i].getValor();
 			}
+
 		}else{
 			cout << "Não existe despesa com " << tipo << endl;
+			break;
 		}
 	}
+	cout << "-------------------------------------" << endl;
+	cout << "Total da busca: R$" << soma << endl;
 
-	cout << "Gastos total: " << computo->calculaTotalDeDespesas() << endl;
+	cout << "-------------------------------------" << endl;
+	cout << endl << "Gastos total: R$" << computo->calculaTotalDeDespesas() << endl;
 }
