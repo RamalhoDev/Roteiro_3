@@ -23,7 +23,7 @@ Empregado::Empregado(string n, string s, double S)
 }
 Empregado::~Empregado()
 {
-	
+
 }
 string Empregado::getNome()
 {
@@ -58,5 +58,9 @@ bool Empregado::verificaEmpregado()
 }
 void Empregado::Aumento()
 {
-	//getline(cin,nome) FALTAAAAAA
+    double ano, aumento;
+    ano=salario*13;
+    aumento=ano+ano*0.1;
+    cout<<"Salario anual com decimo terceiro:  "<<ano<<endl;
+    cout<<"Salario anual com +10%:  "<<aumento<<endl;
 }

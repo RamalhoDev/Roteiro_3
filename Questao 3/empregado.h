@@ -1,4 +1,3 @@
-
 #ifndef EMPREGADO_H_
 #define EMPREGADO_H_
 
@@ -21,4 +20,4 @@ class Empregado {
 		void Aumento();
 };
 
-#endif 
+#endif
